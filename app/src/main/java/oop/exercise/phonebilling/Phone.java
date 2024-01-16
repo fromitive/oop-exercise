@@ -15,4 +15,8 @@ public class Phone {
     public List<Call> getCalls(){
         return Collections.unmodifiableList(calls);
     }
+
+    public void call(Call call) {
+        calls.add(call);
+    }
 }
