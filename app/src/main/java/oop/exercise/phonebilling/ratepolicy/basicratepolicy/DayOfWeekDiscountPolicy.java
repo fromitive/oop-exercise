@@ -3,6 +3,7 @@ package oop.exercise.phonebilling.ratepolicy.basicratepolicy;
 import oop.exercise.common.Money;
 import oop.exercise.phonebilling.Call;
 import oop.exercise.phonebilling.DateTimeInterval;
+import oop.exercise.phonebilling.discountrule.DayOfWeekDiscountRule;
 import oop.exercise.phonebilling.ratepolicy.BasicRatePolicy;
 
 import java.util.List;
