@@ -1,4 +1,4 @@
-package oop.exercise.phonebilling.ratepolicy.basicratepolicy;
+package oop.exercise.phonebilling.discountrule;
 
 import oop.exercise.common.Money;
 import oop.exercise.phonebilling.DateTimeInterval;
