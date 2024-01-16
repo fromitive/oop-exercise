@@ -3,25 +3,31 @@ package oop.exercise.phonebilling;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;
+
 public class Call {
     DateTimeInterval interval;
-    public Duration getDuartion(){
+
+    public Call(LocalDateTime from, LocalDateTime to) {
+        this.interval = DateTimeInterval.of(from, to);
+    }
+
+    public Duration getDuration() {
         return interval.duration();
     }
 
-    public LocalDateTime getFrom(){
+    public LocalDateTime getFrom() {
         return interval.getFrom();
-    } 
+    }
 
-    public LocalDateTime getTo(){
+    public LocalDateTime getTo() {
         return interval.getTo();
     }
 
-    public DateTimeInterval getInterval(){
+    public DateTimeInterval getInterval() {
         return interval;
     }
 
-    public List<DateTimeInterval> splitByDay(){
+    public List<DateTimeInterval> splitByDay() {
         return interval.splitByDay();
     }
 }
