@@ -5,7 +5,11 @@ import oop.exercise.phonebilling.Call;
 import oop.exercise.phonebilling.Phone;
 import oop.exercise.phonebilling.RatePolicy;
 
-public abstract class BasicRatePolicy implements RatePolicy {
+import java.util.List;
+import java.util.ArrayList;
+
+public class BasicRatePolicy implements RatePolicy {
+    private List<FeeRule> feeRules = new ArrayList<>();
 
     @Override
     public Money calculateFee(Phone phone) {
@@ -14,6 +18,10 @@ public abstract class BasicRatePolicy implements RatePolicy {
                 .reduce(Money.ZERO, (first, second) -> first.plus(second));
     }
 
-    protected abstract Money calculateCallFee(Call call);
-    
+    private Money calculateCallFee(Call call) {
+        return feeRules.stream()
+                .map(feeRule -> feeRule.calculate(call))
+                .reduce(Money.ZERO, (first, second) -> first.plus(second));
+    }
+
 }
