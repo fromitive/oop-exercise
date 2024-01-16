@@ -11,7 +11,7 @@ public abstract class BasicRatePolicy implements RatePolicy {
     public Money calculateFee(Phone phone) {
         return phone.getCalls().stream()
                 .map(each -> calculateCallFee(each))
-                .reduce(Money.ZERO, (first, second) -> first.add(second));
+                .reduce(Money.ZERO, (first, second) -> first.plus(second));
     }
 
     protected abstract Money calculateCallFee(Call call);

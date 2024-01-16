@@ -9,11 +9,11 @@ public class Money {
         this.amount = amount;
     }
 
-    public Money add(Money that){
+    public Money plus(Money that){
         return new Money(this.amount.add(that.amount));
     }
 
-    public Money time(double value){
+    public Money times(double value){
         return new Money(amount.multiply(BigDecimal.valueOf(value)));
     }
 }
