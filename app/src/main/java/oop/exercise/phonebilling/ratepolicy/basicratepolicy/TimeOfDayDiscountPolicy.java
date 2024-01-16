@@ -32,8 +32,8 @@ public class TimeOfDayDiscountPolicy extends BasicRatePolicy {
         Money result = Money.ZERO;
         for (int loop = 0; loop < starts.size(); loop++) {
             result = result.plus(amounts.get(loop).times(
-                Duration.between(from(interval, starts.get(loop)),to(interval, ends.get(loop)))
-                .getSeconds() / durations.get(loop).getSeconds()));
+                    Duration.between(from(interval, starts.get(loop)), to(interval, ends.get(loop)))
+                            .getSeconds() / durations.get(loop).getSeconds()));
         }
         return result;
     }
