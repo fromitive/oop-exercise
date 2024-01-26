@@ -3,7 +3,7 @@ package oop.exercise.pizzastore;
 public class PizzaStore {
     PizzaFactory factory;
 
-    public PizzaStore(PizzaFactory factory) {
+    private PizzaStore(PizzaFactory factory) {
         this.factory = factory;
     }
 

@@ -6,7 +6,7 @@ import oop.exercise.pizzastore.pizzafactory.NYPizzaFactory;
 
 public class PizzaStoreClient {
     public static void main(String[] args) {
-        PizzaStore store = new PizzaStore(new NYPizzaFactory());
+        PizzaStore store = PizzaStore.from(new NYPizzaFactory());
         store.orderPizza(PizzaType.CHEEZE);
     }
 }
