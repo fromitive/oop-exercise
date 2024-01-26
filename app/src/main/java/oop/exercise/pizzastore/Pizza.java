@@ -4,7 +4,7 @@ public abstract class Pizza {
     protected IngredientFactory ingredientFactory;
     protected String regionName;
 
-    protected Pizza(IngredientFactory ingredientFactory, String regionName) {
+    public Pizza(IngredientFactory ingredientFactory, String regionName) {
         this.ingredientFactory = ingredientFactory;
         this.regionName = regionName;
     }

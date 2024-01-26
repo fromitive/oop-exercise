@@ -3,9 +3,11 @@ package oop.exercise.pizzastore.ingredientfactory;
 import oop.exercise.pizzastore.IngredientFactory;
 import oop.exercise.pizzastore.ingredient.Cheeze;
 import oop.exercise.pizzastore.ingredient.Dough;
+import oop.exercise.pizzastore.ingredient.Pepperoni;
 import oop.exercise.pizzastore.ingredient.Sauce;
 import oop.exercise.pizzastore.ingredient.cheeze.ReggianoCheeze;
 import oop.exercise.pizzastore.ingredient.dough.ThinCrustDough;
+import oop.exercise.pizzastore.ingredient.pepperoni.SlicedPepperoni;
 import oop.exercise.pizzastore.ingredient.sauce.MarinaraSauce;
 
 public class NYIngredientFactory implements IngredientFactory{
@@ -28,4 +30,11 @@ public class NYIngredientFactory implements IngredientFactory{
         return new MarinaraSauce();
     }
 
+    @Override
+    public Pepperoni createPepperoni() {
+        System.out.println("SlicedPepperoni 생성");
+        return new SlicedPepperoni();
+    }
+
+    
 }

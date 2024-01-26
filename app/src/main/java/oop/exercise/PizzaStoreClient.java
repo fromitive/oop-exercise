@@ -8,5 +8,6 @@ public class PizzaStoreClient {
     public static void main(String[] args) {
         PizzaStore store = PizzaStore.from(new NYPizzaFactory());
         store.orderPizza(PizzaType.CHEEZE);
+        store.orderPizza(PizzaType.PEPPERONI);
     }
 }

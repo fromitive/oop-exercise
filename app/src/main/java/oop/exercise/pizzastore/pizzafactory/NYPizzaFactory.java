@@ -3,6 +3,7 @@ package oop.exercise.pizzastore.pizzafactory;
 import oop.exercise.pizzastore.PizzaType;
 import oop.exercise.pizzastore.Pizza;
 import oop.exercise.pizzastore.pizza.ny.NYCheezePizza;
+import oop.exercise.pizzastore.pizza.ny.NYPepperoniPizza;
 import oop.exercise.pizzastore.PizzaFactory;
 import oop.exercise.pizzastore.IngredientFactory;
 import oop.exercise.pizzastore.ingredientfactory.NYIngredientFactory;
@@ -15,6 +16,9 @@ public class NYPizzaFactory implements PizzaFactory{
     public Pizza create(PizzaType type) {
         if (type == PizzaType.CHEEZE) {
             return new NYCheezePizza(ingredientFactory, regionName);
+        }
+        if (type == PizzaType.PEPPERONI) {
+            return new NYPepperoniPizza(ingredientFactory, regionName);
         }
         throw new IllegalArgumentException("%s pizza does not support.".formatted(type));
     }
