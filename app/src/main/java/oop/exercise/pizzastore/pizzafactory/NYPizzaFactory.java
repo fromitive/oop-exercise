@@ -1,11 +1,11 @@
 package oop.exercise.pizzastore.pizzafactory;
 
-import oop.exercise.pizzastore.IngredientFactory;
-import oop.exercise.pizzastore.Pizza;
-import oop.exercise.pizzastore.PizzaFactory;
 import oop.exercise.pizzastore.PizzaType;
-import oop.exercise.pizzastore.ingredient.ingredientfactory.NYIngredientFactory;
+import oop.exercise.pizzastore.Pizza;
 import oop.exercise.pizzastore.pizza.ny.NYCheezePizza;
+import oop.exercise.pizzastore.PizzaFactory;
+import oop.exercise.pizzastore.IngredientFactory;
+import oop.exercise.pizzastore.ingredientfactory.NYIngredientFactory;
 
 public class NYPizzaFactory implements PizzaFactory{
     

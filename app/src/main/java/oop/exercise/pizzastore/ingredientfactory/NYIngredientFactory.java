@@ -1,4 +1,4 @@
-package oop.exercise.pizzastore.ingredient.ingredientfactory;
+package oop.exercise.pizzastore.ingredientfactory;
 
 import oop.exercise.pizzastore.IngredientFactory;
 import oop.exercise.pizzastore.ingredient.Cheeze;
