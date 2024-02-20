@@ -11,6 +11,8 @@ import java.util.stream.Collectors;
 public class CustomAdder {
     private final Pattern pattern;
     private final String defaultDelimiters = ":,";
+
+    private final String wow = "인코딩 테스트";
     private List<Integer> operand = new ArrayList<>();
 
     public CustomAdder(Pattern pattern) {
